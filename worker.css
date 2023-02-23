@@ -48,13 +48,13 @@
   
   .wrapper .sidebar .sign-up{
           position: fixed;
-          
-          bottom: 8px;
+          list-style: none;
+          bottom: 80px;
           left:0;
           width: 200px;
           height: 120px;
           background-color: rgb(81, 15, 187);
-          
+          border: 1px solid #ccc;
           padding: 20px;
          color: darkorange;
          text-align: center;
@@ -67,22 +67,53 @@
   .wrapper .main-content .header{
     padding: 20px;
     background: #f3F5F9;
-    color: rgb(111, 114, 15);
+    color: chocolate;
     border-bottom: 1px solid;
   }
+  .wrapper .h{
+    text-align: center;
+    background-color: bisque;
+  }
+  .container {
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   
-  .info{
-    display: block;
-    padding: 10px;
-    background-color: beige;
+  .worker {
+    text-align: center;
   }
-  .btn-1{
-        background-color: blueviolet;
-        font-size: 24px;
-        display: block; 
-        margin: 0 auto; 
-        color: black;
-        width: 500px;
-        height: 80px;
+  
+  .worker img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }  
+
+  button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
   }
-     
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  h1{
+    align-content: center;
+    color: blueviolet;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+  }

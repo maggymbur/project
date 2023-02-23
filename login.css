@@ -76,13 +76,17 @@
     padding: 10px;
     background-color: beige;
   }
-  .btn-1{
-        background-color: blueviolet;
-        font-size: 24px;
-        display: block; 
-        margin: 0 auto; 
-        color: black;
-        width: 500px;
-        height: 80px;
+.login-form {
+    margin: 50px auto 50px auto;
+    width: 80%;
+    background-color: white;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 1px 5px 2px #330000;
+    z-index: -1;
   }
-     
+  h1{
+      align-content: center;
+      color: blueviolet;
+      margin-top: 80px;
+      margin-left: 100px;
+  }
