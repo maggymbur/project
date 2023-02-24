@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+.stars {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+/* Increasing the size of the stars */
+.star {
+	font-size: 100px;
+	color: #FFD700;
+	cursor: pointer;
+}
+
+/* Styling for the stars when they are empty */
+.star.empty {
+	color: #ccc;
+}

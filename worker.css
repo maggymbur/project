@@ -46,6 +46,7 @@
   color: burlywood;
   }
   
+  
   .wrapper .sidebar .sign-up{
           position: fixed;
           list-style: none;
@@ -75,7 +76,7 @@
     background-color: bisque;
   }
   .container {
-    background-color: aqua;
+    background-color: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

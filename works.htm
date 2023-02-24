@@ -7,6 +7,7 @@
    <title>HOME</title>
    <link rel="stylesheet" href="./worker.css">
    <script src="https://kit.fontawesome.com/3f3b37584c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
    <div class="wrapper">
@@ -22,11 +23,11 @@
             <li><a href="./works.htm"><i class="fa-solid fa-circle-question"></i>How it works</a></li>
             
             <li><a href="#"><i class="fa-regular fa-comments"></i>Feedback</a></li>
-            <li> <a href="#">Rate Us</a></li>
+            <li> <a href="./rate.htm">Rate Us</a></li>
          
          <div class="reachOut">
-          <a href=" https://wa.me/707429670"><img src="./whatsapp.avif" style="width: 50px;height:60px"> </a> 
-          <a href="www.facebook.com"><img src="./facebook.png" style="width: 60px;height:60px"></a> 
+          <a href=" https://wa.me/707429670"><img src="./images/whatsapp.avif" style="width: 50px;height:60px"> </a> 
+          <a href="www.facebook.com"><img src="./images/facebook.png" style="width: 60px;height:60px"></a> 
          </div>
             <div class="sign-up">
                <ul>
@@ -89,14 +90,52 @@
                   <button type="submit">Submit</button>
 
                 </div>
+
+                <div class="worker">
+                  <img src="./images/worker1.jpg" alt="Worker 5">
+                  <h2>Emily Williams</h2>
+                  <p>Age: 32</p>
+                  <p>Experience: 4 years</p>
+                  <p>Skills: Laundry, Cooking, Cleaning</p>
+                  <p>worker: care-giver </p>
+        
+                  <button type="submit">Submit</button>
+
+                </div>
               </div>
+
+              
+               <div class="py-4"> 
+                 <h2 class="text-center">contact us</h2>
+               </div>
+               <div class="w-50 m-auto"> 
+                 <form action ="about.php" method="post">
+                   <div class="form-group">
+                      <label>name:</label>
+                      <input type="text" name="name" class="form-control">
+                   </div>
+                   <div class="form-group">
+                      <label>email:</label>
+                      <input type="text" name="email" class="form-control">
+                   </div>
+                   <div class="form-group">
+                      <label>number:</label>
+                      <input type="text" name="number" class="form-control">
+                   </div>
+                     <button type="submit" class="btn btn-success">submit</button>
+                 </form>
+               </div>
+                
+           
               
       </div>
    </div>
    
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
 </body>
 </html>
