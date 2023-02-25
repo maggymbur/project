@@ -1,5 +1,4 @@
-@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , 
-screen and (-webkit-device-pixel-ratio:1.5){
+
 /* Basic styling for the form */
 form {
 	max-width: 500px;
@@ -63,4 +62,3 @@ input:valid + span, textarea:valid + span {
 	display: none;
 }
 
-}
