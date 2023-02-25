@@ -1,8 +1,9 @@
-@media screen and (min-width: 992px) {
+@media only screen and (max-width: 480px) {
 /* Basic styling for the form */
 form {
 	max-width: 500px;
 	margin: 0 auto;
+}
 }
 
 label {
@@ -60,4 +61,4 @@ input:invalid + span, textarea:invalid + span {
 input:valid + span, textarea:valid + span {
 	display: none;
 }
-}
+
