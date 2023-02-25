@@ -7,7 +7,48 @@
    <title>HOME</title>
    <link rel="stylesheet" href="./login.css">
    <script src="https://kit.fontawesome.com/3f3b37584c.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+    body {
+        background-color: #f1f1f1;
+    }
+    
+    form {
+        background-color: #ffffff;
+        width: 300px;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+</style>
+   
 </head>
 <body>
    <div class="wrapper">
@@ -26,8 +67,8 @@
             <li> <a href="./rate.htm">Rate Us</a></li>
          
          <div class="reachOut">
-          <a href=" https://wa.me/707429670"><img src="./whatsapp.avif" style="width: 50px;height:60px"> </a> 
-          <a href="www.facebook.com"><img src="./facebook.png" style="width: 60px;height:60px"></a> 
+          <a href=" https://wa.me/707429670"><img src="./images/whatsapp.avif" style="width: 50px;height:60px"> </a> 
+          <a href="www.facebook.com"><img src="./images/facebook.png" style="width: 60px;height:60px"></a> 
          </div>
             <div class="sign-up">
                <ul>
@@ -39,62 +80,22 @@
          </ul>
       </div>
       <div class="main-content">
-         
-         <div class="container">
-            <form class="login-form">
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form2Example1" class="form-control" />
-                  <label class="form-label" for="form2Example1">Email address</label>
-                </div>
-              
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="form2Example2" class="form-control" />
-                  <label class="form-label" for="form2Example2">Password</label>
-                </div>
-              
-                <!-- 2 column grid layout for inline styling -->
-                <div class="row mb-2">
-                  <div class="col d-flex justify-content-center">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                      <label class="form-check-label" for="form2Example31"> Remember me </label>
-                    </div>
-                  </div>
-              
-                  <div class="col">
-                    <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
-                  </div>
-                </div>
-              
-                <!-- Submit button -->
-                <button  type="button" class="btn btn-primary btn-block mb-2"><a style="text-decoration: none; color: greenyellow;"  href="../home.html">Log in</a></button>
-              
-                <!-- Register buttons -->
-                <div class="text-center">
-                  <p>Not a member? <a href="./signup.htm">signup</a></p>
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-              
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-              
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-              
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
-              </form>
-              </div>
+       
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+          <div class="text-center">
+            <p>Not a member? <a href="./signup.htm">signup</a></p>
+          </div>
+          <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a><br><br>
+          <input type="submit" value="Login">
+          
+      </form>
               
       </div>
    </div>
