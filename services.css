@@ -1,4 +1,5 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , 
+screen and (-webkit-device-pixel-ratio:1.5){
 body{
     background-color: none;
 }
