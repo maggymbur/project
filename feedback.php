@@ -1,5 +1,5 @@
+<?php error_reporting(0);?>
 <?php
-
   $con = mysqli_connect('localhost','root');
 
   if($con) {
@@ -9,15 +9,14 @@
       echo"connection failed";
   }
 
-  mysqli_select_db($con, 'feedback');
+  mysqli_select_db($con, 'photography');
 
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $feedback = $_POST['feedback'];
+  $number = $_POST['number'];
 
-  $query = "INSERT INTO users (name, email, feedback) VALUES('$name', '$email', '$feedback' )";
+  $query = "INSERT INTO users (name, email, number) VALUES('$name', '$email', '$number' )";
 
   mysqli_query($con, $query);
-  header('location: feedback.htm');
-exit(); // Make sure to exit the script after the redirect
+  header('location:index.htm');
 ?>
