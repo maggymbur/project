@@ -7,7 +7,7 @@
    <title>HOME</title>
    <link rel="stylesheet" href="./ourMaids.css">
    <script src="https://kit.fontawesome.com/3f3b37584c.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
 </head>
 <body>
    <div class="wrapper">
@@ -31,7 +31,7 @@
          </div>
             <div class="sign-up">
                <ul>
-                  <li><a href="./login.htm"><i class="fa-duotone fa-right-to-bracket"></i>Login</a></li>
+                  <li><a href="./login/logins.php"><i class="fa-duotone fa-right-to-bracket"></i>Login</a></li>
                   <li><a href="./signup.htm"><i class="fa-light fa-user-plus"></i>Sign up</a></li>
                </ul>
             </div>
@@ -41,15 +41,20 @@
       <div class="main-content">
          <h1>WELCOME TO HOMLY. Choose a worker of your choice </h1><br><br>
          <div class="container">
+           
                 <div class="worker">
+                 <form action="ourMaids.php" method="post">
+                 <label for="mobile-no">Mobile No:</label>
+		            <input type="text" name="mobile_no" id="mobile-no" required> <br><br>
+                   <br><br>
                   <img src="./images/homly1.jpg" alt="Worker 1">
                   <h2>Jane Doe</h2>
                   <p>Age: 25</p>
                   <p>Experience: 2 years</p>
                   <p>Skills: Cleaning, Cooking, Laundry</p>
                   <p>worker:housemaid</p>
-                  <button type="submit">Submit</button>
-                </div>
+                  <button type="submit" name="submit-1">Submit</button>
+             </div>
                 <div class="worker">
                   <img src="./images/homly2.jpg" alt="Worker 2">
                   <h2>Maggy Smith</h2>
@@ -57,7 +62,7 @@
                   <p>Experience: 5 years</p>
                   <p>Skills: Childcare, Cooking, Ironing</p>
                   <p>worker: nanny</p>
-                  <button type="submit">Submit</button>
+                  <button type="submit" name="submit-2">Submit</button>
                 </div>
                 <div class="worker">
                   <img src="./images/nanny.jpg" alt="Worker 3">
@@ -66,8 +71,7 @@
                   <p>Experience: 7 years</p>
                   <p>Skills: Cleaning, Cooking, Shopping</p>
                   <p>worker: housemaid</p>
-                  <button type="submit">Submit</button>
-
+                  <button type="submit" name="submit-3">Submit</button>
                 </div>
                 <div class="worker">
                   <img src="./images/nature1.jpg" alt="Worker 4">
@@ -76,7 +80,7 @@
                   <p>Experience: 3 years</p>
                   <p>Skills: Childcare, Cooking, Cleaning</p>
                   <p>worker: nanny</p>
-                  <button type="submit">Submit</button>
+                  <button type="submit" name="submit-4">Submit</button>
 
                 </div>
                 <div class="worker">
@@ -87,7 +91,7 @@
                   <p>Skills: Laundry, Cooking, Cleaning</p>
                   <p>worker: care-giver </p>
         
-                  <button type="submit">Submit</button>
+                  <button type="submit" name="submit-5">Submit</button>
 
                 </div>
 
@@ -99,39 +103,12 @@
                   <p>Skills: Laundry, Cooking, Cleaning</p>
                   <p>worker: care-giver </p>
         
-                  <button type="submit">Submit</button><br><br>
+                  <button type="submit" name="submit-6">Submit</button>
+                 </div>
 
-                </div>
-
-                <div class="worker">
-                  <img src="./images/homly2.jpg" alt="Worker 2">
-                  <h2>Maggy Smith</h2>
-                  <p>Age: 30</p>
-                  <p>Experience: 5 years</p>
-                  <p>Skills: Childcare, Cooking, Ironing</p>
-                  <p>worker: nanny</p>
-                  <button type="submit">Submit</button>
-                </div>
-
-                <div class="worker">
-                  <img src="./images/homly2.jpg" alt="Worker 2">
-                  <h2>Maggy Smith</h2>
-                  <p>Age: 30</p>
-                  <p>Experience: 5 years</p>
-                  <p>Skills: Childcare, Cooking, Ironing</p>
-                  <p>worker: nanny</p>
-                  <button type="submit">Submit</button>
-                </div>
-
-                <div class="worker">
-                  <img src="./images/homly2.jpg" alt="Worker 2">
-                  <h2>Maggy Smith</h2>
-                  <p>Age: 30</p>
-                  <p>Experience: 5 years</p>
-                  <p>Skills: Childcare, Cooking, Ironing</p>
-                  <p>worker: nanny</p>
-                  <button type="submit">Submit</button>
-                </div>
+               </form>
+            
+               
               </div>
 
               
@@ -147,10 +124,6 @@
    </div>
 
   
-   <script src="./ourMaids.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>

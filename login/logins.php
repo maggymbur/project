@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>HOME</title>
-   <link rel="stylesheet" href="./login.css">
+   <link rel="stylesheet" href="./login/login.css">
    <script src="https://kit.fontawesome.com/3f3b37584c.js" crossorigin="anonymous"></script>
    
    <style>
@@ -75,7 +75,7 @@
          </div>
             <div class="sign-up">
                <ul>
-                  <li><a href="./login.htm"><i class="fa-duotone fa-right-to-bracket"></i>Login</a></li>
+                  <li><a href="./login/logins.php"><i class="fa-duotone fa-right-to-bracket"></i>Login</a></li>
                   <li><a href="./signup.htm"><i class="fa-light fa-user-plus"></i>Sign up</a></li>
                </ul>
             </div>
@@ -84,12 +84,15 @@
       </div>
       <div class="main-content">
        
-        <form  method="post">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email">
-  
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password">
+        <form action="login/login.php"  method="post">
+        <h2></h2>
+        <?php if(isset($_GET['error'])) {?>
+            <p cass="error"> <?php echo $_GET['error'];?></p>
+        <?php } ?>
+        <label> User Name </label>
+        <input type="email" name="uname" placeholder="email"><br>
+        <label> password </label>
+        <input type="password" name="password" placeholder="password">
           <div class="text-center">
             <p>Not a member? <a href="./signup.htm">signup</a></p>
           </div>

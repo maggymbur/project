@@ -8,6 +8,6 @@ buttons.forEach(button => {
     event.preventDefault();
 
     // Display an alert message
-    alert('Thank yoy for choosing. Check your email for more information');
+    alert('Thank you for choosing. Check your email for more information');
   });
 });
