@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Form styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Style links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 500px; /* reduce the width to 400px */
+  height: 700px; /* increase the height to 500px */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="box">
+            <h1>Househelp System Terms and Conditions</h1>
+          <form action="submit-form.php" method="post">
+            <p>Please read the following terms and conditions carefully. By using the Househelp System, you agree to be bound by these terms and conditions:</p>
+            <ol>
+              <li>The Househelp System is a platform that allows clients to find and hire househelps for their household needs.</li>
+              <li>Clients are responsible for verifying the identity, qualifications, and background of any househelps they hire through the Househelp System.</li>
+              <li>Househelps are responsible for providing the services that they have been hired to perform in a professional and competent manner.</li>
+              <li>The Househelp System does not guarantee the quality, suitability, or reliability of any househelps hired through the platform.</li>
+            </ol>
+            <label for="agree-checkbox">
+              <input type="checkbox" id="agree-checkbox" name="agree-checkbox" required>
+              I have read and agree to the Househelp System terms and conditions.
+            </label>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

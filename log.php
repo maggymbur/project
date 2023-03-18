@@ -1,3 +1,62 @@
+<?php
+
+// Database credentials
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "form";
+
+// Create a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the login form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Get the input values from the login form
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Prepare a SQL statement to retrieve the user data
+    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+
+    // Execute the query and store the results in a variable
+    $result = $conn->query($sql);
+
+    // Check if there is only one row of user data
+    if ($result->num_rows == 1) {
+        // Fetch the user data as an associative array
+        $row = $result->fetch_assoc();
+
+        // Start a new session for the logged-in user
+        session_start();
+
+        // Set the session variables for the logged-in user
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['email'] = $row['email'];
+
+        // Redirect the logged-in user to a new page
+        header("location: index.php");
+    } else {
+        // Display an error message for an invalid login
+        echo "Invalid login credentials";
+    }
+}
+
+// Close the database connection
+$conn->close();
+
+?>
+
+
+
+
+
 
  
 <!DOCTYPE html>
@@ -182,12 +241,12 @@
       </div>
       <div class="main-content">
        
-        <form action="login.php"  method="post">
+        <form action="log.php"  method="post">
         <h2></h2>
             <p cass="error"> </p>
        
-        <label> User Name </label>
-        <input type="email" name="uname" placeholder="email"><br>
+            <label> email </label>
+        <input type="email" name="email" placeholder="email"><br>
         <label> password </label>
         <input type="password" name="password" placeholder="password">
           <div class="text-center">
@@ -198,7 +257,7 @@
             <a href="#!">Forgot password?</a><br><br>
           
 
-          <button class="btn-1"><a href="./login.php" style="text-decoration:none; color: black;" >log in</a></button>
+          <button class="btn-1"> login</button>
           
       </form>
       

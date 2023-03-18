@@ -1,3 +1,36 @@
+<?php 
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    // SOMETHING WAS POSTED
+     $username = $_POST['username'];
+     $password = $_POST['password'];
+     $email = $_POST['email'];
+
+     if(!empty($username) && !empty($password) && !empty($email) && is_numeric($username))
+     {
+          // save to database
+          $user_id = random_num(20);
+          $password_hash = password_hash($password, PASSWORD_DEFAULT);
+          $stmt = mysqli_prepare($con, "INSERT INTO users (user_id, user_name, password, email) VALUES (?, ?, ?, ?)");
+          mysqli_stmt_bind_param($stmt, "ssss", $user_id, $username, $password_hash, $email);
+          mysqli_stmt_execute($stmt);
+
+          header("location: login.php");
+          die;
+     } else 
+     {
+        echo "please enter valid info";
+     }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +41,79 @@
    <link rel="stylesheet" href="./login.css">
    <script src="https://kit.fontawesome.com/3f3b37584c.js" crossorigin="anonymous"></script>
    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  body{
+    background: #f3F5F9;
+  
+  }
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+  .wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: rgb(81, 15, 187);
+    padding: 30px 0;
+  
+  }
+  .sidebar h2{
+    background: chocolate;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid;
+    border-top:1px solid floralwhite ;
+  }
+  .sidebar ul li a{
+    color: blanchedalmond;
+    display: block;
+  }
+  .sidebar ul li .fa{
+    width: 25px;
+  
+  }
+  .sidebar ul li:hover a{
+  color: burlywood;
+  }
+  
+  .wrapper .sidebar .sign-up{
+          position: fixed;
+          
+          bottom: 8px;
+          left:0;
+          width: 200px;
+          height: 120px;
+          background-color: rgb(81, 15, 187);
+          
+          padding: 20px;
+         color: darkorange;
+         text-align: center;
+  
+  }
+  .wrapper .main-content{
+    width: 100%;
+    margin-left: 200px;
+  }
+  .wrapper .main-content .header{
+    padding: 20px;
+    background: #f3F5F9;
+    color: rgb(111, 114, 15);
+    border-bottom: 1px solid;
+  }
+  
     body {
         background-color: #f1f1f1;
     }
@@ -48,6 +154,15 @@
     input[type="submit"]:hover {
         background-color: #3e8e41;
     }
+    .btn-1{
+        background-color: green;
+        font-size: 20px;
+        display: block; 
+        margin: 0 auto; 
+        color: black;
+        width: 200px;
+        height: 60px;
+  }
 </style>
 </head>
 <body>
@@ -106,8 +221,8 @@
             </div>
           </div>
         
-  
-          <input type="submit" value="Sign Up">
+          <button class="btn-1"><a href="./login.php" style="text-decoration:none; color: black;" >sign up</a></button>
+         
       </form>
               
       </div>
